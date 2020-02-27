@@ -1,0 +1,6 @@
+/*build/*
+*.o
+gdisk
+sgdisk
+cgdisk
+fixparts
