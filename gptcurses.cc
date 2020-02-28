@@ -23,10 +23,13 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#ifdef __APPLE__
-#include <ncurses.h>
-#else
+
+#include "config.h"
+
+#if defined(HAVE_NCURSESW_NCURSES_H)
 #include <ncursesw/ncurses.h>
+#else /* HAVE_NCURSES_H */
+#include <ncurses.h>
 #endif
 #include "gptcurses.h"
 #include "support.h"
